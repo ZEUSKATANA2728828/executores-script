@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #0b0f14;
+  background: radial-gradient(circle, #0b0f14, #000);
   color: #fff;
 }
 
@@ -14,27 +14,26 @@ body {
 .aviso-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.95);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 999;
 }
 
 .aviso-box {
   background: #111;
   padding: 20px;
+  border-radius: 14px;
   max-width: 500px;
-  border-radius: 12px;
-  border: 1px solid #00ffcc;
-  overflow-y: auto;
   max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid #00ffcc;
 }
 
 .aviso-box h2 {
-  text-align: center;
-  margin-bottom: 10px;
   color: #00ffcc;
+  text-align: center;
 }
 
 .aviso-box p {
@@ -50,11 +49,11 @@ body {
 
 .aviso-botoes button {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
+  border-radius: 10px;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .aviso-botoes button:first-child {
@@ -80,33 +79,54 @@ main {
 
 .card {
   background: #111;
-  padding: 20px;
-  border-radius: 14px;
+  padding: 25px;
+  border-radius: 18px;
   width: 100%;
-  max-width: 350px;
-  box-shadow: 0 0 15px #00ffcc44;
+  max-width: 360px;
   text-align: center;
+  box-shadow: 0 0 20px #00ffcc55;
+}
+
+.contador {
+  display: block;
+  margin: 10px 0;
+  opacity: 0.8;
 }
 
 .btn-download {
-  display: block;
-  margin-top: 15px;
-  padding: 14px;
-  background: linear-gradient(90deg, #00ffcc, #00ccff);
-  color: #000;
-  text-decoration: none;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
   font-weight: bold;
-  border-radius: 10px;
-  transition: transform 0.2s;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #00ffcc, #00ccff);
+  cursor: pointer;
+  animation: pulse 2s infinite;
 }
 
-.btn-download:hover {
-  transform: scale(1.05);
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #00ffcc; }
+  50% { box-shadow: 0 0 25px #00ffcc; }
+  100% { box-shadow: 0 0 10px #00ffcc; }
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  font-size: 13px;
-  opacity: 0.7;
+  padding: 15px;
+  opacity: 0.6;
 }
+
+/* TOAST */
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00ffcc;
+  color: #000;
+  padding: 12px 20px;
+  border-radius: 20px;
+  display: none;
+  font-weight: bold;
+  }
