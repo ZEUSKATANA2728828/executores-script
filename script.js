@@ -1,32 +1,18 @@
-const aviso = document.getElementById("aviso");
-const countEl = document.getElementById("count");
-const toast = document.getElementById("toast");
-
-if (localStorage.getItem("aceito")) {
-  aviso.style.display = "none";
+function aceitarAviso(){
+  localStorage.setItem("aviso_script","ok");
+  document.getElementById("aviso").style.display="none";
 }
-
-let downloads = localStorage.getItem("downloads") || 0;
-countEl.textContent = downloads;
-
-function aceitar() {
-  localStorage.setItem("aceito", "true");
-  aviso.style.display = "none";
+function recusarAviso(){
+  window.location.href="index.html";
 }
-
-function recusar() {
-  window.location.href = "https://www.google.com";
+function checarAviso(){
+  if(localStorage.getItem("aviso_script")!=="ok"){
+    document.getElementById("aviso").style.display="flex";
+  }
 }
-
-function baixar() {
-  downloads++;
-  localStorage.setItem("downloads", downloads);
-  countEl.textContent = downloads;
-
-  toast.style.display = "block";
-  setTimeout(() => toast.style.display = "none", 2000);
-
-  setTimeout(() => {
-    window.open("https://fgd8.short.gy/DELTA", "_blank");
-  }, 800);
+function copiarScript(id){
+  const txt=document.getElementById(id);
+  txt.select();
+  document.execCommand("copy");
+  alert("Script copiado ✅");
 }
