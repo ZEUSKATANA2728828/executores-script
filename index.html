@@ -12,26 +12,27 @@
 <div id="aviso" class="aviso-overlay">
   <div class="aviso-box">
     <h2>⚠️ AVISO IMPORTANTE</h2>
-    <p>1. Este site disponibiliza links de APKs encontrados na internet.</p>
-    <p>2. Não hospedamos nenhum arquivo em nossos servidores.</p>
-    <p>3. O download é de total responsabilidade do usuário.</p>
-    <p>4. APKs podem apresentar riscos ao dispositivo.</p>
-    <p>5. Use sempre antivírus atualizado.</p>
-    <p>6. Não nos responsabilizamos por danos ao aparelho.</p>
-    <p>7. Alguns APKs podem violar termos de serviços.</p>
-    <p>8. Baixe apenas se você souber o que está fazendo.</p>
-    <p>9. O site é apenas informativo.</p>
-    <p>10. Nenhuma garantia é oferecida.</p>
-    <p>11. Não incentivamos pirataria.</p>
-    <p>12. Todo conteúdo pertence aos seus criadores.</p>
-    <p>13. Use apenas para fins educacionais.</p>
-    <p>14. O uso é por sua conta e risco.</p>
-    <p>15. Podemos remover links a qualquer momento.</p>
-    <p>16. Não somos afiliados a marcas citadas.</p>
-    <p>17. Ao continuar, você concorda com tudo acima.</p>
-    <p>18. Caso discorde, saia do site.</p>
-    <p>19. O acesso implica aceitação total.</p>
-    <p>20. Obrigado pela compreensão.</p>
+
+    <p>1. Este site apenas redireciona links.</p>
+    <p>2. Nenhum APK é hospedado aqui.</p>
+    <p>3. O uso é responsabilidade do usuário.</p>
+    <p>4. APKs podem conter riscos.</p>
+    <p>5. Use antivírus.</p>
+    <p>6. Não garantimos funcionamento.</p>
+    <p>7. Não incentivamos pirataria.</p>
+    <p>8. Conteúdo pertence aos criadores.</p>
+    <p>9. Uso educacional.</p>
+    <p>10. Sem garantias.</p>
+    <p>11. Pode haver falhas.</p>
+    <p>12. Links externos.</p>
+    <p>13. Não somos afiliados.</p>
+    <p>14. Use por sua conta.</p>
+    <p>15. Podemos remover links.</p>
+    <p>16. Atualizações não garantidas.</p>
+    <p>17. Ao aceitar, concorda.</p>
+    <p>18. Se discordar, saia.</p>
+    <p>19. Leia com atenção.</p>
+    <p>20. Obrigado.</p>
 
     <div class="aviso-botoes">
       <button onclick="aceitar()">ACEITAR</button>
@@ -40,21 +41,27 @@
   </div>
 </div>
 
-<!-- CONTEÚDO PRINCIPAL -->
 <header>
   <h1>⬇️ Delta Downloads</h1>
-  <p>Downloads rápidos, simples e diretos</p>
+  <p>Download rápido, seguro e direto</p>
 </header>
 
 <main>
   <div class="card">
     <h2>Delta APK</h2>
-    <p>Aplicativo leve e funcional</p>
-    <a class="btn-download" href="https://fgd8.short.gy/DELTA" target="_blank">
+    <p>Versão leve e otimizada</p>
+
+    <span class="contador">
+      📥 Downloads: <strong id="count">0</strong>
+    </span>
+
+    <button class="btn-download" onclick="baixar()">
       ⬇️ DOWNLOAD DELTA
-    </a>
+    </button>
   </div>
 </main>
+
+<div id="toast">Download iniciado 🚀</div>
 
 <footer>
   <p>© 2025 - Delta Downloads</p>
