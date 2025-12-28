@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Estica Tela</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="checarAviso()">
+
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="scripts.html">📜 Scripts</a>
+</nav>
+
+<div id="aviso" class="aviso">
+  <div class="aviso-box">
+    <h2>⚠️ AVISO LEGAL</h2>
+    <p>Uso por sua conta e risco.</p>
+    <p>Scripts podem causar punições.</p>
+    <p>Não nos responsabilizamos.</p>
+    <p>Ao aceitar, concorda.</p>
+    <button onclick="aceitarAviso()">ACEITAR</button>
+    <button onclick="recusarAviso()" style="background:#ff4d4d;color:#fff;">RECUSAR</button>
+  </div>
+</div>
+
+<header><h1>📺 Estica Tela (+FPS)</h1></header>
+
+<div class="card">
+<textarea id="script2" readonly>
+getgenv().Resolution = { [".gg/scripters"] = 0.65 }
+local Camera = workspace.CurrentCamera
+if getgenv().gg_scripters == nil then
+game:GetService("RunService").RenderStepped:Connect(function()
+Camera.CFrame = Camera.CFrame * CFrame.new(
+0,0,0,1,0,0,0,
+getgenv().Resolution[".gg/scripters"],0,0,0,1)
+end)
+end
+getgenv().gg_scripters = "Aori0001"
+</textarea>
+
+<button class="copy-btn" onclick="copiarScript('script2')">
+📋 COPIAR SCRIPT
+</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
