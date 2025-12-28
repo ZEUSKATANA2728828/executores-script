@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>FPS BOOST</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="checarAviso()">
+
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="scripts.html">📜 Scripts</a>
+</nav>
+
+<div id="aviso" class="aviso">
+  <div class="aviso-box">
+    <h2>⚠️ AVISO LEGAL</h2>
+    <p>1. Scripts são externos.</p>
+    <p>2. Uso por sua conta.</p>
+    <p>3. Pode causar ban.</p>
+    <p>4. Não garantimos segurança.</p>
+    <p>5. Use apenas se souber.</p>
+    <p>6. Não somos responsáveis.</p>
+    <p>7. Conteúdo educacional.</p>
+    <p>8. Não incentivamos trapaça.</p>
+    <p>9. Ao aceitar, concorda.</p>
+    <p>10. Obrigado.</p>
+    <button onclick="aceitarAviso()">ACEITAR</button>
+    <button onclick="recusarAviso()" style="background:#ff4d4d;color:#fff;">RECUSAR</button>
+  </div>
+</div>
+
+<header><h1>🚀 FPS BOOST</h1></header>
+
+<div class="card">
+<textarea id="script1" readonly>
+-- Made by RIP#6666
+_G.Settings = {
+Players = {["Ignore Me"]=true,["Ignore Others"]=true},
+Meshes = {Destroy=false,LowDetail=true},
+Images = {Invisible=true,LowDetail=false,Destroy=false},
+["No Particles"]=true,
+["No Camera Effects"]=true,
+["No Explosions"]=true,
+["No Clothes"]=true,
+["Low Water Graphics"]=true,
+["No Shadows"]=true,
+["Low Rendering"]=true,
+["Low Quality Parts"]=true
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+</textarea>
+
+<button class="copy-btn" onclick="copiarScript('script1')">
+📋 COPIAR SCRIPT
+</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
